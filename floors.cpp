@@ -4,11 +4,14 @@
 using namespace std;
 
 int main() { //rubberducking time?!
-	int n,c; cin>>n>>c; //getting input
+	long long n,c; cin>>n>>c; //getting input
 	bool arr[n]; //creating an array for booleans with n size (to represent the building)
-	vector<int> ans; //creating a vector for the answers
-	for (int i=1; i<=c; i++) { //1-indexing, for every cat that enters...
-		int x; cin>>x; //input initial floor number
+	for (int i=0; i<n; i++){
+		arr[i] = false;   
+	}
+	vector<long long> ans; //creating a vector for the answers
+	for (long long i=1; i<=c; i++) { //1-indexing, for every cat that enters...
+		long long x; cin>>x; //input initial floor number
 		if (i == 1) { //if first term
 			ans.push_back(x); //immediately assign desired floor number to cat
 			arr[x-1] = true; //set floor as taken
@@ -30,7 +33,7 @@ int main() { //rubberducking time?!
 		}
 	}
 	
-	for (int i=0; i<c; i++) {
+	for (long long i=0; i<c; i++) {
 		cout<<ans[i]<<"\n"; //output assigned floors
 	}
 }
