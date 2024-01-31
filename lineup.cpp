@@ -1,4 +1,3 @@
-//still wrong
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
@@ -24,7 +23,7 @@ signed main() {
 	int l=0, h=0;
 	//actual algorithm!
 	while (h<n) {
-		for (int i=l; i<h; i++) {
+		for (int i=l; i<=h; i++) {
 			s.insert(v[i].second);
 		}
 		if (s.size() == 3) {
