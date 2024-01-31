@@ -1,3 +1,4 @@
+//still wrong
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
@@ -33,9 +34,11 @@ signed main() {
 			if (dist<B[h]) B[h] = dist;
 			//increase l pointer
 			l++;
+			s.clear();
 		} else {
 			//increase h pointer
 			h++;
+			s.clear();
 		}
 	}
 
@@ -44,5 +47,3 @@ signed main() {
 	cout<<B[0];
 
 }
-
-//ah fuck it doesnt work
