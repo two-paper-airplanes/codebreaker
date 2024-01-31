@@ -3,7 +3,7 @@ using namespace std;
 #define int long long
 #define pii pair<int, int>
 
-int main() {
+signed main() {
 	int n; cin>>n;
 	vector<pii> v;
 	set<int> s;
@@ -35,7 +35,7 @@ int main() {
 			l++;
 		} else {
 			//increase h pointer
-			h++
+			h++;
 		}
 	}
 
@@ -45,18 +45,4 @@ int main() {
 
 }
 
-/*
----------------------------------------PSEUDOCODE---------------------------------------
-✅ um so basically i want to make a vector of pairs containing the distance of each ot the cows and their types
-✅ and sort them in ascending order
-✅ then make the array B[] of n integers and set all integers to 9e18
-✅ after that i should set the lower and upper limits at 0
-add the types to a set
-and check for the size of the set
-if the set size is 3, i should change b[h] to the distance which should be v[h].first-v[l].first, then i should move the l pointer up and repeat
-if the set size is not 3, i should move the h pointer up and repeat
-✅ this shld go on while h is less than n (um problem!!! what if the lowest distance includes the last integer)
-oh and if the h is fixed and l is moved up and the set size is still 3 then you shld check if the new b[h] is smaller and only change it if its smaller
-finally sort the B[] array
-and output B[0];
-*/
+//ah fuck it doesnt work
