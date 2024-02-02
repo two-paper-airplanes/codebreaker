@@ -29,15 +29,20 @@ signed main() {
             s.pop();
         } else if (commands[i].first == "LOAD") {
             for (int j = 0; j<reg.size(); j++) {
-                s.push(reg[j]);
+                s.push(reg.top());
+                reg.pop();
             }
         } else if (commands[i].first == "PLUS") {
-            temp = s[0] + s[1];
-            s.pop(); s.pop();
+            temp = s.top();
+            s.pop();
+            temp += s.top();
+            s.pop();
             s.push(temp);
         } else if (commands[i].first == "TIMES") {
-            temp = s[0] * s[1];
-            s.pop(); s.pop();
+            temp = s.top();
+            s.pop();
+            temp = temp * s.top();
+            s.pop();
             s.push(temp);
         } else if (commands[i].first == "IFZERO") {
             if (s.top() == 0) {
