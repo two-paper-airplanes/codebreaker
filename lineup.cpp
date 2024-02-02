@@ -12,6 +12,14 @@ signed main() {
 		int x, y; cin>>x>>y;
 		v.push_back({x, y});
 	}
+	
+	//find number of types of cows
+	for (int i=0; i<n; i++) {
+		s.insert(v[i].second);
+	}
+	int size = s.size();
+	s.clear();
+	
 	//sort them in ascending order
 	sort(v.begin(), v.end(), [](pii a, pii b) {
 		return a.first < b.first;
@@ -26,7 +34,7 @@ signed main() {
 		for (int i=l; i<=h; i++) {
 			s.insert(v[i].second);
 		}
-		if (s.size() == 3) {
+		if (s.size() == size) {
 			int dist = v[h].first-v[l].first;
 			//check if dist is smaller than b[h]
 			//if so, change b[h] to dist
